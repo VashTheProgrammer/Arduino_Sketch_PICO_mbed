@@ -15,6 +15,8 @@ void setup() {
 
   // Add "loop2" and "loop3" to scheduling.
   // "loop" is always started by default.
+
+  // 10 thread max !
   Scheduler.startLoop(loop2);
   Scheduler.startLoop(loop3);
 }
