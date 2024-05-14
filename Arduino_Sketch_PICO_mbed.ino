@@ -1,9 +1,9 @@
 // Include Scheduler since we want to manage multiple tasks.
 #include <Scheduler.h>
 
-int led1 = 2u; //rosso
-int led2 = 3u; // verde
-int led3 = 4u; // blu
+int led1 = 2u; //rosso   //GP2
+int led2 = 3u; //verde   //GP3
+int led3 = 4u; //blu     //GP4
 
 void setup() {
   Serial.begin(9600);
@@ -16,7 +16,7 @@ void setup() {
   // Add "loop2" and "loop3" to scheduling.
   // "loop" is always started by default.
 
-  // 10 thread max !
+  // 10 thread max and stackSize = 1024 for every task !
   Scheduler.startLoop(loop2);
   Scheduler.startLoop(loop3);
 }
